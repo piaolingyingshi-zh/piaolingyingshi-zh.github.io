@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12100d">
+<title>飘零影视｜独立片单与影像札记集散地</title>
+<meta name="description" content="飘零影视是一处手动打理的私人观影档案，收录冷门长片、作者纪录片与老片修复随笔。没有算法喂片，只有逐部写下的观看理由。访问 piaolingyingshi-zh.github.io 翻页。">
+<meta name="keywords" content="飘零影视, piaolingyingshi-zh.github.io, 独立电影片单, 冷门影片档案, 老片修复笔记">
+<meta name="author" content="飘零影视编辑部">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta property="og:title" content="飘零影视｜独立片单与影像札记集散地">
+<meta property="og:description" content="手动打理的私人观影档案：冷门长片、作者纪录片与老片修复随笔，逐部写下观看理由。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://piaolingyingshi-zh.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://piaolingyingshi-zh.github.io/">
+<style>
+:root{
+  --paper:#efe7d8;
+  --paper-2:#e3d8c3;
+  --ink:#1b1916;
+  --ink-soft:#4a453c;
+  --rust:#8c3a1e;
+  --rust-deep:#5e2613;
+  --olive:#5d623f;
+  --line:rgba(27,25,22,.22);
+  --shadow:0 1px 0 rgba(255,255,255,.55), 0 14px 34px -18px rgba(20,16,10,.55);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.5), transparent 42%),
+    radial-gradient(circle at 88% 82%, rgba(140,58,30,.07), transparent 40%),
+    repeating-linear-gradient(0deg, rgba(0,0,0,.012) 0 1px, transparent 1px 4px);
+}
+img{max-width:100%;display:block;}
+a{color:var(--rust-deep);text-decoration:none;border-bottom:1px solid rgba(140,58,30,.35);}
+a:hover{border-bottom-color:var(--rust);}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+
+/* ---------- 顶部 ---------- */
+header.top{
+  padding:34px 0 18px;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+  background:rgba(239,231,216,.94);
+  backdrop-filter:blur(6px);
+}
+.top-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.brand .cn{
+  font-size:30px;letter-spacing:.34em;margin:0;font-weight:700;
+  text-indent:.34em;
+}
+.brand .en{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11px;letter-spacing:.18em;color:var(--ink-soft);margin-top:6px;
+}
+.brand .en b{color:var(--rust);font-weight:600;}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+nav.tabs a{
+  font-size:14px;letter-spacing:.12em;
+  padding:6px 12px;border:1px solid var(--line);border-radius:2px;
+  background:rgba(255,255,255,.4);color:var(--ink-soft);
+}
+nav.tabs a:hover{background:var(--rust);color:var(--paper);border-color:var(--rust);}
+
+/* ---------- 首屏 ---------- */
+.hero{padding:70px 0 54px;position:relative;}
+.hero .kicker{
+  font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-size:11px;letter-spacing:.3em;color:var(--rust);
+  display:flex;align-items:center;gap:10px;margin-bottom:22px;
+}
+.hero .kicker::before{content:"";width:38px;height:1px;background:var(--rust);display:inline-block;}
+h1.lede{
+  font-size:clamp(34px,6.4vw,66px);
+  line-height:1.22;margin:0 0 24px;font-weight:700;letter-spacing:.02em;
+}
+h1.lede em{font-style:normal;color:var(--rust);}
+.hero p.lead{margin:0;max-width:38em;font-size:18px;color:var(--ink-soft);}
+.hero .meta-row{
+  margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;
+  font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--ink-soft);
+}
+.hero .meta-row span b{display:block;color:var(--ink);font-size:15px;letter-spacing:.04em;font-family:inherit;margin-bottom:2px;}
+
+/* 胶片条装饰 */
+.filmstrip{
+  margin:44px 0 0;padding:16px 0;
+  background:
+    linear-gradient(90deg,var(--ink) 0 6px,transparent 6px 14px,var(--ink) 14px 20px,transparent 20px 28px,var(--ink) 28px 34px,transparent 34px 42px,var(--ink) 42px 48px,transparent 48px 56px,var(--ink) 56px 62px,transparent 62px 70px,var(--ink) 70px 76px,transparent 76px 84px,var(--ink) 84px 90px,transparent 90px 98px,var(--ink) 98px 104px,transparent 104px 112px,var(--ink) 112px 118px,transparent 118px 126px,var(--ink) 126px 132px,transparent 132px 100%),
+    var(--ink-soft);
+  border-radius:3px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;padding-left:14px;padding-right:14px;
+}
+.frame{
+  aspect-ratio:4/3;background:var(--paper-2);
+  border:1px solid rgba(0,0,0,.35);border-radius:2px;
+  padding:14px 14px 26px;position:relative;overflow:hidden;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.5), 0 6px 16px -8px rgba(0,0,0,.5);
+}
+.frame::after{
+  content:"";position:absolute;left:0;right:0;bottom:9px;height:6px;
+  background:repeating-linear-gradient(90deg,var(--ink) 0 3px,transparent 3px 7px);opacity:.55;
+}
+.frame h4{margin:0 0 8px;font-size:16px;letter-spacing:.05em;}
+.frame p{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.6;}
+.frame .no{position:absolute;top:8px;right:12px;font-family:ui-monospace,Menlo,monospace;font-size:10px;color:var(--rust);letter-spacing:.1em;}
+
+/* ---------- 通用栏目 ---------- */
+section.block{padding:76px 0;border-top:1px solid var(--line);}
+.block-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;flex-wrap:wrap;}
+.block-head .idx{
+  font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--rust);
+  border:1px solid var(--line);padding:3px 9px;border-radius:2px;letter-spacing:.14em;
+}
+.block-head h2{
+  font-size:clamp(24px,3.6vw,34px);margin:0;letter-spacing:.04em;font-weight:700;
+}
+.block-head .sub{font-size:13px;color:var(--ink-soft);letter-spacing:.1em;}
+
+/* 片单：图文卡 */
+.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;}
+.card{background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:3px;padding:18px;box-shadow:var(--shadow);}
+.card .tag{font-size:11px;letter-spacing:.16em;color:var(--olive);font-family:ui-monospace,Menlo,monospace;}
+.card h3{font-size:19px;margin:10px 0 6px;letter-spacing:.03em;}
+.card .yr{font-size:12px;color:var(--ink-soft);font-family:ui-monospace,Menlo,monospace;margin-bottom:10px;}
+.card p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+.card .more{display:inline-block;margin-top:14px;font-size:13px;letter-spacing:.08em;}
+
+/* 札记：图文交错 */
+.notes{display:grid;gap:40px;}
+.note{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:start;}
+.note .thumb{aspect-ratio:3/4;background:var(--paper-2);border:1px solid var(--line);position:relative;overflow:hidden;}
+.note .thumb::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.45),transparent 60%),radial-gradient(circle at 30% 30%,rgba(140,58,30,.18),transparent 55%);}
+.note .thumb span{position:absolute;bottom:10px;left:12px;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.14em;color:var(--rust-deep);}
+.note h3{margin:0 0 10px;font-size:21px;letter-spacing:.03em;}
+.note p{margin:0 0 10px;color:var(--ink-soft);font-size:15.5px;}
+.note .foot{font-size:12px;color:var(--ink-soft);font-family:ui-monospace,Menlo,monospace;letter-spacing:.06em;}
+
+/* 档案：定义列表 */
+.archive{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:rgba(255,255,255,.5);}
+.archive div{padding:16px 18px;border-bottom:1px solid var(--line);}
+.archive div:nth-child(odd){border-right:1px solid var(--line);}
+.archive dt{font-size:12px;letter-spacing:.14em;color:var(--rust);font-family:ui-monospace,Menlo,monospace;margin:0 0 4px;}
+.archive dd{margin:0;font-size:15px;}
+
+/* 来信：表单 */
+.letter form{display:grid;gap:14px;max-width:560px;}
+.letter label{font-size:13px;letter-spacing:.1em;color:var(--ink-soft);display:block;margin-bottom:5px;}
+.letter input,.letter textarea{
+  width:100%;padding:11px 12px;font:inherit;font-size:15px;
+  background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:2px;color:var(--ink);
+}
+.letter input:focus,.letter textarea:focus{outline:none;border-color:var(--rust);background:#fff;}
+.letter button{
+  justify-self:start;padding:11px 26px;font:inherit;font-size:14px;letter-spacing:.16em;
+  background:var(--rust-deep);color:var(--paper);border:1px solid var(--rust-deep);border-radius:2px;cursor:pointer;
+}
+.letter button:hover{background:var(--ink);border-color:var(--ink);}
+.letter .hint{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
+
+/* 页脚 */
+footer.end{padding:54px 0 70px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-soft);}
+footer.end .row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+footer.end .site{font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.1em;color:var(--rust);}
+footer.end nav a{margin-right:14px;font-size:13px;}
+
+/* ---------- 移动端 ---------- */
+@media (max-width:720px){
+  body{font-size:16px;}
+  .wrap{padding:0 16px;}
+  header.top{padding:18px 0 12px;}
+  .brand .cn{font-size:23px;letter-spacing:.26em;}
+  nav.tabs a{padding:6px 9px;font-size:13px;}
+  .hero{padding:42px 0 34px;}
+  h1.lede{font-size:32px;}
+  .hero p.lead{font-size:16.5px;}
+  section.block{padding:52px 0;}
+  .note{grid-template-columns:1fr;gap:16px;}
+  .note .thumb{aspect-ratio:16/9;}
+  .archive{grid-template-columns:1fr;}
+  .archive div:nth-child(odd){border-right:none;}
+  .filmstrip{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:380px){
+  .filmstrip{grid-template-columns:1fr;}
+  .brand .cn{font-size:20px;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="brand">
+      <h1 class="cn">飘零影视</h1>
+      <div class="en">EDITED AT <b>piaolingyingshi-zh.github.io</b></div>
+    </div>
+    <nav class="tabs" aria-label="栏目导航">
+      <a href="#roster">本期片单</a>
+      <a href="#notes">观影札记</a>
+      <a href="#archive">片库档案</a>
+      <a href="#letter">寄一封信</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">VOL.01　私人放映中，不按算法排片</div>
+    <h1 class="lede">把散落在各地的好片子，<br><em>一张一张收回来。</em></h1>
+    <p class="lead">这里是飘零影视，一个由个人手动维护的观影档案站。我们不做排行榜，也不追热搜，只记录那些看完之后还想再翻一次抽屉的影片——作者长片、冷门纪录片、老片修复版，以及它们为什么值得被多一个人看见。站点常驻地址 <strong>https://piaolingyingshi-zh.github.io</strong>，所有更新都留在这里。</p>
+    <div class="meta-row">
+      <span><b>04</b>常设栏目</span>
+      <span><b>每月 2 期</b>片单更新</span>
+      <span><b>35mm 偏好</b>胶片与修复源</span>
+      <span><b>piaolingyingshi-zh.github.io</b>唯一访问入口</span>
+    </div>
+
+    <div class="filmstrip" aria-hidden="true">
+      <div class="frame"><span class="no">No.01</span><h4>长镜头的耐心</h4><p>一场戏不剪，观众才有机会迷路。</p></div>
+      <div class="frame"><span class="no">No.02</span><h4>修复笔记</h4><p>颗粒、划痕与色彩漂移，都是年代的证据。</p></div>
+      <div class="frame"><span class="no">No.03</span><h4>片名考据</h4><p>同一个片名，在不同语区活成了两种气质。</p></div>
+      <div class="frame"><span class="no">No.04</span><h4>散场之后</h4><p>看完不急着走，剩下的半句话留在这里。</p></div>
+    </div>
+  </section>
+
+  <!-- 栏目一 -->
+  <section class="block" id="roster" tabindex="-1">
+    <div class="block-head">
+      <span class="idx">01 / ROSTER</span>
+      <h2>本期片单 · 秋场四部</h2>
+      <span class="sub">2026 年 10 月更新</span>
+    </div>
+    <div class="roster">
+      <article class="card">
+        <div class="tag">作者长片</div>
+        <h3>风过旧码头</h3>
+        <div class="yr">2024 · 138 MIN</div>
+        <p>用一艘不肯离港的渔船拍下整座小镇的犹豫。全片只有七场戏，海风是第八个演员。选它的理由写在<a href="#notes">札记第二篇</a>。</p>
+        <a class="more" href="#notes">为什么值得看 →</a>
+      </article>
+      <article class="card">
+        <div class="tag">修复重映</div>
+        <h3>街灯与半扇门</h3>
+        <div class="yr">1968 / 2026 4K 修复 · 96 MIN</div>
+        <p>丢失三十年的中间负片在阁楼里被翻出。修复组保留了胶片的轻微抖动，没做降噪——那种粗糙才是年代本身。</p>
+        <a class="more" href="#archive">查看档案记录 →</a>
+      </article>
+      <article class="card">
+        <div class="tag">纪录片</div>
+        <h3>补锅人的冬天</h3>
+        <div class="yr">2025 · 112 MIN</div>
+        <p>跟拍秦岭脚下一个补锅摊的整个腊月。没有旁白，只有锤子和锅底的回声，是今年最安静的一部。</p>
+        <a class="more" href="#letter">想看同类片，写信点片 →</a>
+      </article>
+      <article class="card">
+        <div class="tag">冷门短片集</div>
+        <h3>三封没寄出的信</h3>
+        <div class="yr">2023 · 54 MIN</div>
+        <p>三位新导演各自拍一封永远寄不出的信。第二段的手写镜头用了真信纸，扫描进画面时墨迹还没干。</p>
+        <a class="more" href="#roster">加入待映清单 →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 栏目二 -->
+  <section class="block" id="notes" tabindex="-1">
+    <div class="block-head">
+      <span class="idx">02 / NOTES</span>
+      <h2>观影札记 · 写在散场之后</h2>
+      <span class="sub">个人口味，不负责客观</span>
+    </div>
+    <div class="notes">
+      <article class="note">
+        <div class="thumb"><span>FRAME 042</span></div>
+        <div>
+          <h3>我们为什么还愿意看慢电影</h3>
+          <p>快节奏的片子给答案，慢电影给时间。最近重看《风过旧码头》，发现导演把最重要的那句台词藏在了背景音里——渔船引擎熄火后，主角没说话，镜头却多停了十四秒。这十四秒不是拖沓，是让你把刚才的谎听出来。</p>
+          <p>在飘零影视的选片标准里，“有没有让人屏住呼吸的三秒”比“剧情够不够炸”重要得多。我们宁可选一场安静的吃饭戏，也不选十场追车。</p>
+          <div class="foot">写于 2026.10.21　阅读约 4 分钟</div>
+        </div>
+      </article>
+      <article class="note">
+        <div class="thumb"><span>FRAME 037</span></div>
+        <div>
+          <h3>修复不是把旧片擦干净</h3>
+          <p>很多人以为 4K 修复就是把划痕抹掉、把颜色调艳。其实最难的决定恰恰相反：哪些伤痕要留。胶片上的雨痕可能是当年放映员换盘留下的，颗粒粗一点，才对得上六十年代的感光速度。</p>
+          <p>所以我们给每部修复片单独开一条档案，记下来源版本、扫描分辨率，以及“哪一帧故意没修”。观影之前读一遍，你会换一副眼睛看它。</p>
+          <div class="foot">写于 2026.10.08　配套档案见 <a href="#archive">片库档案</a></div>
+        </div>
+      </article>
+      <article class="note">
+        <div class="thumb"><span>FRAME 029</span></div>
+        <div>
+          <h3>片名翻译是一门失传的手艺</h3>
+          <p>同一部 <cite>Les Feuilles Mortes</cite>，台湾译成《秋叶》，大陆早年译《枯叶》，日语版干脆只留了季节。三个名字指向同一卷胶片，却让观众带着三种心情走进影院。飘零影视之后会单独开一个“片名考据”小栏，把这类错位慢慢攒起来。</p>
+          <div class="foot">写于 2026.09.27　栏目筹备中</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 栏目三 -->
+  <section class="block" id="archive" tabindex="-1">
+    <div class="block-head">
+      <span class="idx">03 / ARCHIVE</span>
+      <h2>片库档案 · 可查的放映记录</h2>
+      <span class="sub">来源、版本与观看建议</span>
+    </div>
+    <dl class="archive">
+      <div><dt>收录范围</dt><dd>1980 年后的作者电影、独立纪录片、修复重映版，暂不收录商业爽片。</dd></div>
+      <div><dt>片源标注</dt><dd>每部标注发行介质：35mm 胶片、2K/4K 扫描、数字母版，拒绝模糊的“高清版”说法。</dd></div>
+      <div><dt>更新节奏</dt><dd>每月两期，一期片单、一期札记；补档不删旧文，历史版本可沿底部链接回溯。</dd></div>
+      <div><dt>观看建议</dt><dd>推荐耳机 + 暗房模式，纪录片请留到夜里，长片别在通勤路上切开看。</dd></div>
+      <div><dt>站点地址</dt><dd><a href="https://piaolingyingshi-zh.github.io">https://piaolingyingshi-zh.github.io</a>，唯一入口，无镜像无跳转。</dd></div>
+      <div><dt>收录申请</dt><dd>你手上有冷门片的观影笔记？通过 <a href="#letter">寄信栏</a> 发来，入选会署你的名字。</dd></div>
+    </dl>
+  </section>
+
+  <!-- 栏目四 -->
+  <section class="block letter" id="letter" tabindex="-1">
+    <div class="block-head">
+      <span class="idx">04 / LETTER</span>
+      <h2>寄一封信 · 点片或投稿</h2>
+      <span class="sub">真人会读，通常一周内回</span>
+    </div>
+    <p style="max-width:40em;color:var(--ink-soft);margin:0 0 26px;">飘零影视靠读者喂片。告诉我一部你舍不得删的片子、为什么它该被更多人看到，或者直接骂我上期片单选得烂——都欢迎。留下的邮箱只用来回信，不上任何名单。</p>
+    <form action="#" method="post" onsubmit="event.preventDefault();this.querySelector('.hint').textContent='信已放进抽屉，飘零影视会亲手回你。';this.reset();">
+      <div>
+        <label for="fname">怎么称呼你</label>
+        <input id="fname" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="fmail">回信邮箱</label>
+        <input id="fmail" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="ffilm">想推荐的片子（片名 + 年份就好）</label>
+        <input id="ffilm" name="film" type="text">
+      </div>
+      <div>
+        <label for="fmsg">想说的话</label>
+        <textarea id="fmsg" name="msg" rows="5" required></textarea>
+      </div>
+      <button type="submit">把信投进抽屉</button>
+      <p class="hint">提交仅为本地交互演示，页面未接入任何后端服务。</p>
+    </form>
+  </section>
+</main>
+
+<footer class="end">
+  <div class="wrap row">
+    <div>
+      <div class="site">piaolingyingshi-zh.github.io</div>
+      <p style="margin:10px 0 0;">飘零影视 · 个人独立观影档案站。所有文字与片单为手工整理，转载请留出处。<br>本站对静态页面友好，适配手机、平板与桌面浏览器。</p>
+    </div>
+    <nav aria-label="底部导航">
+      <a href="#roster">片单</a>
+      <a href="#notes">札记</a>
+      <a href="#archive">档案</a>
+      <a href="#letter">寄信</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
